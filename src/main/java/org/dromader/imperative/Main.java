@@ -2,6 +2,7 @@ package org.dromader.imperative;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.dromader.imperative.Main.Gender.*;
 
@@ -23,7 +24,18 @@ public class Main {
                 females.add(person);
             }
         }
-        System.out.println(females.size());
+
+        for(Person female : females){
+            System.out.println(female);
+        }
+
+        // Declarative approach
+        people.stream()
+                .filter(person -> FEMALE.equals(person.gender))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
+
     }
 
     static class Person {

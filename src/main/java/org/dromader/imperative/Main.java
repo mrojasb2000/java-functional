@@ -19,7 +19,7 @@ public class Main {
         // Imperative approach
         List<Person>  females = new ArrayList<>();
         for(Person person : people){
-            if(person.gender.equals(FEMALE)){
+            if(FEMALE.equals(person.gender)){
                 females.add(person);
             }
         }

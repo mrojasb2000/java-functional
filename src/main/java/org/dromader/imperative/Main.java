@@ -7,7 +7,7 @@ import static org.dromader.imperative.Main.Gender.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Person> peoples = List.of(
+        List<Person> people = List.of(
            new Person("John", MALE),
            new Person("Maria", FEMALE),
            new Person("Aisha", FEMALE),
@@ -18,7 +18,7 @@ public class Main {
 
         // Imperative approach
         List<Person>  females = new ArrayList<>();
-        for(Person person : peoples){
+        for(Person person : people){
             if(person.gender.equals(FEMALE)){
                 females.add(person);
             }

@@ -1,5 +1,6 @@
 package org.dromader.imperative;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.dromader.imperative.Main.Gender.*;
@@ -14,6 +15,15 @@ public class Main {
            new Person("Alice", MALE)
 
         );
+
+        // Imperative approach
+        List<Person>  females = new ArrayList<>();
+        for(Person person : peoples){
+            if(person.gender.equals(FEMALE)){
+                females.add(person);
+            }
+        }
+        System.out.println(females.size());
     }
 
     static class Person {
